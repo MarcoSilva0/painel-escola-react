@@ -1,24 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { FaHome, FaSignInAlt, FaUserAlt } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 import { Nav } from './styled';
 
 export default function Header() {
   return (
     <Nav>
-      <a>
+      <Link to="/">
         <FaHome size={24} />
         Home
-      </a>
-      <a>
+      </Link>
+      <Link to="login">
         <FaSignInAlt size={24} />
         Entrar
-      </a>
-      <a>
+      </Link>
+      <Link to="account">
         <FaUserAlt size={24} />
         Perfil
-      </a>
+      </Link>
     </Nav>
   );
 }
